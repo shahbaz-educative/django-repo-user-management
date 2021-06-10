@@ -26,7 +26,7 @@ SECRET_KEY = 'h7a%ut1*-0^lwg#vbl0g^6or)sd2pj1)=)6_%180n($7t^xz*9'
 DEBUG = True
 
 import os
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 X_FRAME_OPTIONS = "allow-from https://educative.io"
 
 
