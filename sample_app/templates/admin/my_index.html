@@ -1,0 +1,32 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+<!-- {% load customtags %} -->
+
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content %}
+<div id="content-main" class="animated bounceInLeft">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card-header py-3 card shadow mb-4 border border-primary">
+               <a href="/admin/my_view">My custom view </a>
+           </div>
+            {% include "admin/app_list.html" with app_list=app_list show_changelinks=True %}
+           </div>
+</div> 
+
+
+
+{% endblock %}
+
